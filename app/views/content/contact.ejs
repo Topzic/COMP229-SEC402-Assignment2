@@ -1,0 +1,36 @@
+<!--
+    Author:         Ian Cunningham
+    Student ID:     301255223
+    Date:           10/05/2022
+    File:           contact.ejs
+-->
+
+<h1 style="text-align: center;" ><%= title %> </h1>
+
+
+<!-- Contact Information -->
+<p>If you would like to contact me, please reach out to me by email or phone.</p>
+<p>Email: Ian_Cunningham@live.com</p>
+<p style="margin-bottom:125px;">Phone: 1-800-100-1234</p>
+
+<center>
+<!-- Contact form -->
+<form style="margin-bottom:125px;" action="/home">
+
+    <h1 style="margin-bottom:55px;">Contact Form</h1>
+
+    <label for="fname">First & Last Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your first and last name..">
+
+    <label for="count">Country</label>
+    <select id="count" name="country">
+        <option value="canada">Canada</option>
+        <option value="America">America</option>
+        <option value="United Kingdom">UK</option>
+    </select>
+
+    <label for="subject">Details</label>
+    <textarea id="sub" name="sub" placeholder="Write something here, include specific details..." style="height:200px"></textarea>
+    <input type="submit" value="Submit">
+</form>
+</center>
