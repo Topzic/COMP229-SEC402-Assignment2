@@ -1,14 +1,14 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
 const BusinessSchema = new Schema({
-    name: String,
-    phone: Number,
+    name: String, 
+    phone: Number, 
     email: String
 }, {
     timestamps: true,
-    collection: 'BusinessContacts'
+    collection: 'business'
 });
 
 export default mongoose.model('Business', BusinessSchema);
