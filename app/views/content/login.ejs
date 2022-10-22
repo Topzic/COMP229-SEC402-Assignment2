@@ -1,3 +1,10 @@
+<!--
+    Author:         Ian Cunningham
+    Student ID:     301255223
+    Date:           10/21/2022
+    File:           login.ejs
+-->
+
 <div class="container">
     <div class="row">
       <div class="offset-md-3 col-md-6 col-sm-12">
@@ -11,6 +18,7 @@
                 </div>
                 <% } %>
   
+                <!-- Username -->
                 <form method="POST" id="loginForm" novalidate>
                   <div class="form-group mb-2">
                     <div class="input-group">
@@ -24,6 +32,7 @@
                   
                   </div>
   
+                  <!-- Password field -->
                   <div class="form-group mb-2">
                     <div class="input-group">
                       <span class="input-group-addon">
@@ -34,6 +43,7 @@
                       value="" placeholder="Enter your password">
                     </div>
                   
+                  <!-- Login & Cancel Buttons -->
                   </div>                                        
                   <div class="text-end">
                     <button id="loginButton" type="submit" class="btn btn-primary btn-lg">
@@ -43,6 +53,7 @@
                   </div>
                 </form>
               
+            <!-- Registration Link -->
             </div>
             <p class="text-center text-muted small">
               Don't have an account? 

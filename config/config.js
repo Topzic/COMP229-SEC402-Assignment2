@@ -6,4 +6,4 @@
 */
 
 export const Secret = "*U.?a);|$RAV/C/";
-export const MongoURI  = "mongodb+srv://topzic:nova2018@cluster0.3w3fyey.mongodb.net/media2?retryWrites=true&w=majority"
+export const MongoURI  = "mongodb+srv://topzic:nova2018@cluster0.3w3fyey.mongodb.net/COMP229?retryWrites=true&w=majority"

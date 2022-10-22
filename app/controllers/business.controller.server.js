@@ -1,6 +1,14 @@
+/*
+    Author:         Ian Cunningham
+    Student ID:     301255223
+    Date:           10/21/2022
+    File:           business.controller.service.js
+*/
+
 import businessModel from '../models/business.js';
 import { UserDisplayName } from '../utils/index.js';
 
+// Loads all the records from the database
 export function DisplayBusinessList(req, res, next){
     businessModel.find(function(err, businessCollection) {
         if(err){
@@ -12,10 +20,12 @@ export function DisplayBusinessList(req, res, next){
     })
 }
 
+// Displays add business contact page
 export function DisplayBusinessAddPage(req, res, next){
     res.render('index', { title: 'Add Business Contact', page: 'business-contacts/edit', contact: {} , username: UserDisplayName(req)});
 }
 
+// Updates the database with the business contact
 export function ProcessBusinessAddPage(req, res, next){
     
     let newBusinessContact = businessModel({
@@ -34,6 +44,7 @@ export function ProcessBusinessAddPage(req, res, next){
     } )
 }
 
+// Displays busines contact edit so you can modify the information
 export function DisplayBusinessEditPage(req, res, next){
     let id = req.params.id;
 
@@ -47,6 +58,7 @@ export function DisplayBusinessEditPage(req, res, next){
     });    
 }
 
+// Updates the database with the modified information
 export function ProcessBusinessEditPage(req, res, next){
 
     let id = req.params.id;
@@ -68,6 +80,7 @@ export function ProcessBusinessEditPage(req, res, next){
     } )
 }
 
+// removes the record from the database
 export function ProcessBusinessDelete(req, res, next){
     let id = req.params.id;
 

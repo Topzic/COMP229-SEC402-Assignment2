@@ -1,3 +1,10 @@
+/*
+    Author:         Ian Cunningham
+    Student ID:     301255223
+    Date:           10/21/2022
+    File:           auth.controller.service.js
+*/
+
 import express from 'express';
 
 // need passport 
@@ -52,6 +59,7 @@ export function ProcessLoginPage(req, res, next){
     })(req, res, next);
 }
 
+// Processing Function
 export function ProcessRegisterPage(req, res, next){
     let newUser = new User({
         username: req.body.username,
@@ -78,6 +86,7 @@ export function ProcessRegisterPage(req, res, next){
     });
 }
 
+// Processing Function
 export function ProcessLogoutPage(req, res, next){
     req.logOut(function(err){
         if(err){
