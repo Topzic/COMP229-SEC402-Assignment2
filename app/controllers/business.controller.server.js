@@ -8,7 +8,7 @@
 import businessModel from '../models/business.js';
 import { UserDisplayName } from '../utils/index.js';
 
-// Loads all the records from the database
+// Loads and sorts all the records from the database
 export function DisplayBusinessList(req, res, next){
     businessModel.find(function(err, businessCollection) {
         if(err){
@@ -17,7 +17,7 @@ export function DisplayBusinessList(req, res, next){
         }
 
         res.render('index', {title: 'Business Contacts', page: 'business-contacts/list', contacts: businessCollection, username: UserDisplayName(req)});
-    })
+    }).sort({"name":1});
 }
 
 // Displays add business contact page
